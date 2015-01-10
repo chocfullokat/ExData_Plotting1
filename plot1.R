@@ -12,7 +12,8 @@ data$Date <- as.Date(data$Date,format="%d/%m/%Y")
 data = subset(data, data$Date>=as.Date("2007-02-01") & data$Date<=as.Date("2007-02-02"))
 
 #Create histogram
-png(filename = "plot1.png", width = 480, height = 480)
+##using white background to mirror course project page
+png(filename = "plot1.png", width = 480, height = 480, bg="white")
 hist(data$Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 
 dev.off()

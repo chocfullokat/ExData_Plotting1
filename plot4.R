@@ -12,7 +12,8 @@ data$Date <- as.Date(data$Date,format="%d/%m/%Y")
 data = subset(data, data$Date>=as.Date("2007-02-01") & data$Date<=as.Date("2007-02-02"))
 
 #Creates 4 scatterplots, 2 per row
-png(filename = "plot4.png", width = 480, height = 480, bg="transparent")
+##using white background to mirror course project page
+png(filename = "plot4.png", width = 480, height = 480, bg="white")
 par(mfrow = c(2,2))
 
 ##Top left graph

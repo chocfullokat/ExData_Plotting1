@@ -12,7 +12,8 @@ data$Date <- as.Date(data$Date,format="%d/%m/%Y")
 data = subset(data, data$Date>=as.Date("2007-02-01") & data$Date<=as.Date("2007-02-02"))
 
 #Create scatterplot with two graphs and legend
-png(filename = "plot3.png", width = 480, height = 480, bg="transparent")
+##using white background to mirror course project page
+png(filename = "plot3.png", width = 480, height = 480, bg="white")
 plot(data$DateTime,data$Sub_metering_1,type="l",ylab="Energy sub metering",xlab="",col="black") 
 lines(data$DateTime,data$Sub_metering_2,col="red")
 lines(data$DateTime,data$Sub_metering_3,col="blue")
